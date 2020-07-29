@@ -145,7 +145,7 @@ const toggleTickSub = (_id, ind) => {
 
 const editBodySub = (_id, ind, body) => {
     return(dispatch) => {
-        fetch(Host + '/api/editBody/' ,{ method: 'PUT', credentials: 'include', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({_id: _id, ind: ind, body: body})})
+        fetch(Host + '/api/users/editBody/' ,{ method: 'PUT', credentials: 'include', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({_id: _id, ind: ind, body: body})})
         .then(res => res.json())
         .then(json => {
             console.log(json.success)
