@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+#app {
+    background-color: #e1dbdb;;
+}
+
+.header-div {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(195, 195, 186);
+    font-size: 2vh;
+}
+
+.UpdForm {
+    
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    background-color: blueviolet;
+}
+
+#posts-div {
+    padding-top: 10vh;
+}
+
+.post-div {
+    background-color: grey;
+    margin-bottom: 20px;
+    border: solid 1px black;
+    color: rgb(29, 29, 238);
+
+}
+
+.items-div {
+    display: flex;
+    flex-direction: row;
+    
+}
+.item-div {
+    --unit: 15vw;
+    border: solid 1px black;
+    margin: 0 20px;
+    min-width: var(--unit);
+    min-height: 15vh;
+}
+
+.item-div-ticked {
+    --unit: 15vw;
+    border: solid 3px black;
+    margin: 0 20px;
+    min-width: var(--unit);
+    min-height: 15vh;
+}
+
+.post-btn {
+    color: black;
+    background-color: rgb(76, 151, 76);
+    padding: 3px;
+}
+.post-btn:hover {
+    cursor: pointer;
+}
+
+.tick-button-entering > svg {
+	transition: 300ms;
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.tick-button-exiting > svg {
+	transition: 300ms;
+	transform: translateY(50px);
+	opacity: 0;
+}
+
+.tick-button-exited > svg {
+	transform: translateY(-50px);
+	opacity: 0;
+}
+
+.add-sub-pop-exited {
+    display: none;
+    transform: scale(0.3);
+}
+
+.add-sub-pop-exiting {
+    transform: scale(0.3);
+}
+
+.add-sub-pop-entered {
+    display: block;
+    
+}
+
+.add-sub-pop-entering {
+    transform: scale(0.3);
+    
+}
