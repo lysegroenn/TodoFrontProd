@@ -16,6 +16,7 @@ class App extends React.Component {
         return (
             <div>
                 <div>
+                    <Header user={this.props.user} loginUser={this.props.loginUser} logoutUser={this.props.logoutUser} />
                 </div>
                 <div id="posts-div">
                     {this.props.posts ?
