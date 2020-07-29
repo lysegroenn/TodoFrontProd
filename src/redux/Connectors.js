@@ -111,9 +111,9 @@ const removeUserPost = (_id, body) => {
     }
 }
 
-const addUserSub = (_id) => {
+const addUserSub = (_id, body) => {
     return (dispatch) => {
-        fetch(Host + '/api/users/userSub/' , { method: 'POST', credentials: 'include', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({_id: _id})})
+        fetch(Host + '/api/users/userSub/' , { method: 'POST', credentials: 'include', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({_id: _id, body: body})})
         .then(res => res.json())
         .then(json => {
             //console.log(json)
