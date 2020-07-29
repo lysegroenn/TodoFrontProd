@@ -202,8 +202,8 @@ const mapDispatch = (dispatch) => {
         removeUserPost: (_id) => {
             dispatch(removeUserPost(_id))
         },
-        addUserSub: (_id) => {
-            dispatch(addUserSub(_id))
+        addUserSub: (_id, body) => {
+            dispatch(addUserSub(_id, body))
         },
         removeUserSub: (_id, ind) => {
             dispatch(removeUserSub(_id, ind))
