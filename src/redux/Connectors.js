@@ -5,7 +5,7 @@ import { loadUser, setUser } from './localstorage';
 import thunk from 'redux-thunk';
 
 //const Host = process.env.HOST || 'http://www.lysegroenn.com'
-const Host = 'http://www.lysegroenn.com'
+const Host = 'https://www.lysegroenn.com'
 
 
 
