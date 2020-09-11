@@ -63,10 +63,10 @@ const SubEditing = ({ _id, ind, editing, setEditing, newBody, setNewBody, setNew
     <StyledSubDiv>
         <StyledEditingDiv>
             <textarea onChange={setNewBodyF} value={newBody} ></textarea>
-            <button onClick={() => {editBodySub(_id, ind, newBody); setEditing(false); setNewBody('')}}>Fire</button>
         </StyledEditingDiv>
         <StyledUtilsDiv>
                 <EditButton _id={_id} ind={ind} editing={editing} setEdit={setEditing} />
+                <UpdateButton _id={_id} ind={ind} newBody={newBody} setEdit={setEditing} editBodySub={editBodySub} />
         </StyledUtilsDiv>
     </StyledSubDiv>
 )
