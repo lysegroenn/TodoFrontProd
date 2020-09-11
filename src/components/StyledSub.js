@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import TickButton from './TickButton';
 import DeleteButton from './DeleteButton';
 import EditButton from './EditButton';
+import UpdateButton from './UpdateButton';
 
 const StyledSubDiv = styled.div`
 border: 1px solid black;
