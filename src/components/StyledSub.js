@@ -60,13 +60,13 @@ const SubDone = ({ sub, _id, ind, remove, tick, edit, editing, setEditing }) => 
     </StyledSubDiv>
 )
 
-const SubEditing = ({ _id, ind, editing, setEditing, newBody, setNewBody, setNewBodyF, editBodySub }) => (
+const SubEditing = ({ _id, ind, editing, setEditing, newBody, oldBody, setNewBody, setNewBodyF, editBodySub }) => (
     <StyledSubDiv>
         <StyledEditingDiv>
             <textarea onChange={setNewBodyF} value={newBody} ></textarea>
         </StyledEditingDiv>
         <StyledUtilsDiv>
-                <EditButton _id={_id} ind={ind} editing={editing} setEdit={setEditing} />
+                <EditButton _id={_id} ind={ind} editing={editing} setEdit={setEditing} setNewBody={setNewBody} oldBody={oldBody} />
                 <UpdateButton _id={_id} ind={ind} newBody={newBody} setEdit={setEditing} editBodySub={editBodySub} />
         </StyledUtilsDiv>
     </StyledSubDiv>
@@ -76,7 +76,7 @@ const SubEditing = ({ _id, ind, editing, setEditing, newBody, setNewBody, setNew
 
 const StyledSub = ({ sub, _id, ind, remove, tick, edit, editBodySub }) => {
     const [editing, setEditing] = useState(false)
-    const [newBody, setNewBody] = useState('')
+    const [newBody, setNewBody] = useState(sub.body)
 
     const setNewBodyF = (event) => {
         setNewBody(event.target.value)
@@ -86,7 +86,7 @@ const StyledSub = ({ sub, _id, ind, remove, tick, edit, editBodySub }) => {
     return (
         <div>
             {!editing && <SubDone sub={sub} _id={_id} ind={ind} remove={remove} tick={tick} editing={editing} setEditing={setEditing} />}
-            {editing && <SubEditing _id={_id} ind={ind} editing={editing} setEditing={setEditing} newBody={newBody} setNewBody={setNewBody} setNewBodyF={setNewBodyF} editBodySub={editBodySub} />}
+            {editing && <SubEditing _id={_id} ind={ind} editing={editing} setEditing={setEditing} newBody={newBody} oldBody={sub.body} setNewBody={setNewBody} setNewBodyF={setNewBodyF} editBodySub={editBodySub} />}
         </div>
      )
 }
