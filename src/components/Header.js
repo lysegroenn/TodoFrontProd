@@ -9,7 +9,7 @@ class Header extends React.Component {
                 <h1>This is the Header.</h1>
                 {this.props.user.googleId === '' ? 
                     <div>
-                        <button onClick={e => window.open("http://www.lysegroenn.com/auth/google/", "_self")}>Log in with Google</button>
+                        <button onClick={e => window.open("https://www.lysegroenn.com/auth/google/", "_self")}>Log in with Google</button>
                     </div>
                 :
                     <div>
